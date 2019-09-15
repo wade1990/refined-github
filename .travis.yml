@@ -4,6 +4,11 @@ node_js:
 env:
   - EXTENSION_ID=hlepfoohegkhhmjieoechaddaejaokhf
 
+# Limit testing to `master` branch. PRs will be tested by GitHub Actions
+branches:
+  only:
+  - master
+
 # To deploy locally, you'll need to setup all the ENV variables required by `web-ext-submit` and `chrome-webstore-upload-cli`
 deploy:
   provider: script
